@@ -3,13 +3,13 @@
 .gitignore
 
 #Docker
-.doc8/ker
+.docker
 
 #Python
-app/__pyache__/
-app/*/__pyache__/
-app/*/*/__pyache__/
-app/*/*/*/__pyache__/
+app/__pycache__/
+app/*/__pycache__/
+app/*/*/__pycache__/
+app/*/*/*/__pycache__/
 .env/
 .venv/
 venv/
