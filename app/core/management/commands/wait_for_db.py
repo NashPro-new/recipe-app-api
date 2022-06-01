@@ -19,9 +19,8 @@ class Command(BaseCommand):
         while db_up is False:
             try:
                 self.check(databases=['default'])
-                db_up = True                                                    # when database ready loop breaks
-            except (Psycopg2OpError, OperationalError):                         # exception when database not ready
-                self.stdout.write('Database unavailable, waiting 1 second...')  # shows this message when not ready
-                time.sleep(1)                                                   # loop waits for 1 second
-
-        self.stdout.write(self.style.SUCCESS('Database available!'))            # styled message for success when loop ends
+                db_up = True                                                    
+            except (Psycopg2OpError, OperationalError):                         
+                self.stdout.write('Database unavailable, waiting 1 second...')  
+                time.sleep(1)                                                   
+        self.stdout.write(self.style.SUCCESS('Database available!'))            
