@@ -36,7 +36,7 @@ class ModelTests(TestCase):
     def test_new_user_without_email_raises_error(self):
         """Test that creating a user without an email raises a ValueError."""
         with self.assertRaises(ValueError):                                     # this will raise value error if things in loop is true
-            get_user_model().objects.create_user(' ', 'test123')                 # in loop we have if create user function email is blank with any password
+            get_user_model().objects.create_user('', 'test123')                 # in loop we have if create user function email is blank with any password
 
     def test_create_superuser(self):
         """Test creating a superuser."""
